@@ -1,0 +1,207 @@
+/* ===============================
+   FONT & RESET
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    animation: fadeDown 1s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: fadeUp 1.2s ease;
+}
+
+/* ===============================
+   SOCIAL LINKS
+================================ */
+.social-links a {
+    display: inline-block;
+    margin: 10px 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: white;
+    color: #4e54c8;
+    transform: translateY(-5px);
+}
+
+/* ===============================
+   SECTION TITLE
+================================ */
+section h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #4e54c8;
+    display: block;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+/* ===============================
+   ABOUT SECTION
+================================ */
+section img {
+    margin-top: 20px;
+    border: 5px solid #4e54c8;
+    transition: transform 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.05);
+}
+
+/* ===============================
+   PROJECT CARD
+================================ */
+.project-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.project-card .card-body {
+    padding: 20px;
+}
+
+.project-card h5 {
+    font-weight: 600;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.project-card .btn {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    border: none;
+    border-radius: 25px;
+    padding: 8px 20px;
+    transition: 0.3s ease;
+}
+
+.project-card .btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* ===============================
+   CONTACT SECTION
+================================ */
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+section ul a {
+    color: #4e54c8;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+section ul a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    background: #111;
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
